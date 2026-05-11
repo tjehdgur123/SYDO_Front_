@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-sydo-pink: #f7d8d8;
+  --color-sydo-accent: #ff3344;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-black bg-white antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Markdown Styles */
+  .prose h3 {
+    @apply text-base font-black tracking-tight mb-3 mt-6 first:mt-0;
+  }
+  .prose ul {
+    @apply space-y-2 mb-4 list-disc pl-4;
+  }
+  .prose li {
+    @apply text-gray-700 leading-relaxed;
+  }
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+}
